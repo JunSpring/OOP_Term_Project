@@ -23,4 +23,12 @@ OOP_Term_Project
 2. Login_student.txt파일은 실행 전에 아무것도 적혀있으면 안돼요 
 3. 아이디와 비번이 같으면 안돼요 ㅠ
 4. 준범이 과제라서 베끼면 안돼요 ㅠ
-
+# 📝VERSION 1.1📝 
+## 🔨변경점🔨  
+### print.h / print.cpp  
+학생 여러 명 추가하는 기능을 추가
+### login.cpp  
+비밀번호가 같은 학생이 존재하면 발생하는 오류를 수정
+### main.cpp  
+Login_student.txt을 시작할 때 초기화하는 기능을 추가
+위 주의사항 중 2번을 무시해도 됌  
