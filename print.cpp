@@ -172,7 +172,7 @@ int studentScreen()
 	cout << "1. View Table" << endl;
 	cout << "2. Main Menu" << endl;
 	cout << "3. Exit" << endl << endl;
-	cout << "Enter menu : " << endl;
+	cout << "Enter menu : ";
 	cin >> menu;
 
 	return menu;
@@ -180,8 +180,8 @@ int studentScreen()
 
 void studentViewTable(string id)
 {
+	system("cls");
 	cout << "- Student View Table -" << endl << endl;
-	cout << students.size() << endl;
 	for (int student = 0; student < students.size(); student++)
 	{
 		if (id == students[student].getStudentID())
@@ -189,9 +189,13 @@ void studentViewTable(string id)
 			cout << "      NAME : " << students[student].getStudentNAME() << endl;
 			cout << "    NUMBER : " << students[student].getStudentNUM() << endl;
 			cout << "DEPARTMENT : " << students[student].getStudentDepartment() << endl;
+			cout << "  SUBJECTS : ";
 
 			for (int subject = 0; subject < students[student].getStudentSubjects().size(); subject++)
+			{
 				cout << students[student].getStudentSubjects()[subject] << endl;
+				cout << "             ";
+			}
 
 			break;
 		}
