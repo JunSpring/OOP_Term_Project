@@ -7,17 +7,17 @@ OOP_Term_Project
 # 📝VERSION 1.0📝  
 ## 👨‍🏫파일 설명👨‍🏫   
 ### print.h / print.cpp  
-학생관리 프로그램의 화면 출력을 담당하는 파일들 ㅎ  
+학생관리 프로그램의 화면 출력을 담당하는 파일들  
 ### student.h / student.cpp  
-학생들의 정보를 저장하는 클래스를 적어놓은 파일들 ㅎ  
+학생들의 정보를 저장하는 클래스를 적어놓은 파일들  
 ### login.h / login.cpp  
-로그인 성공여부를 판단해주는 기능과 파일 입출력을 넣어둔 파일들 ㅎ  
+로그인 성공여부를 판단해주는 기능과 파일 입출력을 넣어둔 파일들  
 ### department.h  
-학과에 대한 자료형을 만든 enum만 있는 파일 ㅎ  
+학과에 대한 자료형을 만든 enum만 있는 파일  
 ### main.cpp  
-메인문에 코드 달랑 하나있는 코드 ㅎ 
+메인문에 코드 하나있는 파일 
 ### Login_admin.txt / Login_student.txt  
-로그인 정보를 저장하는 txt파일, login.cpp파일이 작성해준다 ㅎ 
+로그인 정보를 저장하는 txt파일, login.cpp파일이 작성해준다 
 ## ⚡주의사항⚡
 1. Login_admin.txt파일에는 최소 하나 이상의 아이디, 비번이 적혀있어야 해요 
 2. Login_student.txt파일은 실행 전에 아무것도 적혀있으면 안돼요 
