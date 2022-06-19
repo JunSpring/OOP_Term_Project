@@ -55,44 +55,51 @@ int adminScreen()
 
 void addStudentScreen()
 {
-	float grade;
-	string id, pwd, name, dp, subject, number;
-	vector<string> subjects;
-
-	system("cls");
-	cout << "\t- Add Student Screen -" << endl << endl;
-	cout << "        ID : ";
-	cin >> id;
-	cout << "  PASSWORD : ";
-	cin >> pwd;
-	cout << "      NAME : ";
-	cin >> name;
-	cout << "    NUMBER : ";
-	cin >> number;
-	cout << "DEPARTMENT : ";
-	cin >> dp;
-	cout << "     GRADE : ";
-	cin >> grade;
-	cout << " - enter until \"stop\"\n  SUBJECTS : ";
 	while (true)
 	{
-		cin >> subject;
-		if (subject == "stop")
+		float grade;
+		string id, pwd, name, dp, subject, number;
+		vector<string> subjects;
+
+		system("cls");
+		cout << "\t- Add Student Screen -" << endl;
+		cout << "\tenter \"stop\" to stop in ID" << endl << endl;
+		cout << "        ID : ";
+		cin >> id;
+		if (id == "stop")
 			break;
-		subjects.push_back(subject);
-		cout << "             ";
-	}
+		cout << "  PASSWORD : ";
+		cin >> pwd;
+		cout << "      NAME : ";
+		cin >> name;
+		cout << "    NUMBER : ";
+		cin >> number;
+		cout << "DEPARTMENT : ";
+		cin >> dp;
+		cout << "     GRADE : ";
+		cin >> grade;
+		cout << " - enter until \"stop\"\n  SUBJECTS : ";
+		while (true)
+		{
+			cin >> subject;
+			if (subject == "stop")
+				break;
+			subjects.push_back(subject);
+			cout << "             ";
+		}
 
-	student temp(id, pwd, name, number, dp, grade, subjects);
+		student temp(id, pwd, name, number, dp, grade, subjects);
 
-	if (addLogin(mode::student, id, pwd))
-	{
-		students.push_back(temp);
-		cout << endl << "학생 등록을 성공하였습니다." << endl;
+		if (addLogin(mode::student, id, pwd))
+		{
+			students.push_back(temp);
+			cout << endl << "학생 등록을 성공하였습니다." << endl;
+		}
+		else
+			cout << endl << "이미 존재하는 아이디입니다." << endl;
+
+		Sleep(1000);
 	}
-	else
-		cout << endl << "이미 존재하는 아이디입니다." << endl;
-	Sleep(1000);
 }
 
 void deleteStudentScreen()

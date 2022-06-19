@@ -71,22 +71,19 @@ bool deleteLogin(mode mode, string id, string pwd, vector<student>& v)
 		size_t pwdPos = allText.find(pwd);
 		if (idPos != string::npos && pwdPos != string::npos)
 		{
-			int index_first = static_cast<int>(idPos);
-			int index_last = static_cast<int>(pwdPos) + pwd.size() + 1;
+			int index = static_cast<int>(idPos);
 			string temp;
 
-			temp += allText.substr(0, index_first);
-			temp += allText.substr(index_last, -1);
+			temp += allText.substr(0, index);
+			temp += allText.substr(index + id.size() + pwd.size() + 2, -1);
 			open.close();
 
 			ofstream reopen("Login_student.txt", ios_base::trunc);
 			reopen << temp;
 			reopen.close();
 
-			cout << v.size() << endl;
 			for (int i = 0; i < v.size(); i++)
 			{
-				cout << id << ' ' << v[i].getStudentID() << endl;
 				if (id == v[i].getStudentID())
 				{
 					v.erase(v.begin() + i);
